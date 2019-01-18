@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: micro.customer
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.ldh
+Build-Jdk: 1.7.0_67
+Built-By: Li Dehuan
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://www.example.com
+

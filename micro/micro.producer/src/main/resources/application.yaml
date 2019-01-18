@@ -1,0 +1,16 @@
+server:
+  port: 3002
+
+spring:
+  application:
+    name: eureka-client
+
+#注册中心指向start    
+eureka:
+  instance:
+    instance-id: eureka-client2
+    appname: ${spring.application.name}
+  client: 
+    service-url: 
+      defaultZone: http://admin:a123123@127.0.0.1:1234/eureka/
+#注册中心指向end
