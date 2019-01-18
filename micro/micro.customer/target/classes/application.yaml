@@ -3,14 +3,19 @@ server:
 
 spring:
   application:
-    name: ribbon-consumer
+    name: feign-consumer
 
 #注册中心指向start    
 eureka:
   instance:
-    instance-id: ribbon-consumer
+    instance-id: feign-consumer
     appname: ${spring.application.name}
   client: 
     service-url: 
       defaultZone: http://admin:a123123@127.0.0.1:1234/eureka/
 #注册中心指向end
+
+#Feign断路器
+feign:
+  hystrix:
+    enabled: true

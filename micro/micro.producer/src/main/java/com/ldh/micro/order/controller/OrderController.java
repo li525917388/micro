@@ -27,4 +27,12 @@ public class OrderController {
         System.out.println(services);
         return services;
 	}
+    
+    @GetMapping("/info")
+	public String info(){
+		String services = "Services: " + discoveryClient.getServices()+" ip :"+ip;
+        
+        System.out.println(services);
+        return services;
+	}
 }

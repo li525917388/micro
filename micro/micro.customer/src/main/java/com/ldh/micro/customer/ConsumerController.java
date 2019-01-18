@@ -21,8 +21,8 @@ public class ConsumerController {
 	@Resource
 	OrderService orderService;
 	
-	@RequestMapping(value="/ribbon-consumer",method=RequestMethod.GET)
+	@RequestMapping(value="/feign-consumer",method=RequestMethod.GET)
     public String helloConsumer(@RequestParam String name) {
-        return orderService.test(name);
+        return orderService.test(name) + ">>feign";
     }
 }

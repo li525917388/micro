@@ -1,7 +1,7 @@
 package com.ldh.micro;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
@@ -16,7 +16,7 @@ public class Register {
 
 	public static void main(String[] args) {
 		
-		new SpringApplicationBuilder(Register.class).web(true).run(args);
-		//SpringApplication.run(Register.class, args);
+		//new SpringApplicationBuilder(Register.class).web(true).run(args);
+		SpringApplication.run(Register.class, args);
 	}
 }

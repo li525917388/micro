@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ldh</groupId>
 	<artifactId>micro</artifactId>
@@ -18,11 +19,14 @@
 		<module>micro.register</module>
 		<module>micro.producer</module>
 		<module>micro.model</module>
-    <module>micro.customer</module>
-  </modules>
+		<module>micro.customer</module>
+		<module>micro.zuul</module>
+		<module>micro.ribbon</module>
+		<module>micro.configserver</module>
+	</modules>
 
 
-	<!-- spring-cloud�?��项目依赖�?-->
+	<!-- spring-cloud�?��项目依赖�? -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -55,8 +59,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<encoding>utf-8</encoding>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>

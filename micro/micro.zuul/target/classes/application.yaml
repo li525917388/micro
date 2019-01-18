@@ -1,0 +1,26 @@
+server:
+  port: 3200
+
+spring:
+  application:
+    name: service-zuul
+
+#注册中心指向start    
+eureka:
+  instance:
+    instance-id: service-zuul
+    appname: ${spring.application.name}
+  client: 
+    service-url: 
+      defaultZone: http://admin:a123123@127.0.0.1:1234/eureka/
+#注册中心指向end
+
+#路由
+zuul:
+  routes:
+    api-ribbon:
+      path: /api-ribbon/**
+      serviceId: ribbon-consumer
+    api-feign:
+      path: /api-feign/**
+      serviceId: feign-consumer
