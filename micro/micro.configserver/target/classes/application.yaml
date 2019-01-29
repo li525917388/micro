@@ -1,20 +1,29 @@
 server:
   port: 8888
-  
-spring:
-  application:
-    name: config-server
 
-#git远程配置
+#注册中心指向start    
+eureka:
+  instance:
+    instance-id: config-server
+    appname: ${spring.application.name}
+  client: 
+    service-url: 
+      defaultZone: http://127.0.0.1:8889/eureka/
+      
+#配置
 spring:
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          searchPaths: respo
-          username:
-          password:
+          uri: https://gitee.com/ldh-anthony/configCloud
+#          searchPaths: respo
+          search-paths: micro
+#          username: ldh
+#          password: 
       label: master
+  application:
+    name: config-server
+    
       
       

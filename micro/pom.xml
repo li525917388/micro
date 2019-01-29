@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ldh</groupId>
 	<artifactId>micro</artifactId>
@@ -11,7 +10,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.1.RELEASE</version>
+		<version>1.5.2.RELEASE</version>
 	</parent>
 
 
@@ -23,10 +22,25 @@
 		<module>micro.zuul</module>
 		<module>micro.ribbon</module>
 		<module>micro.configserver</module>
-	</modules>
+		<module>micro.configclienk</module>
+    <module>micro.confproducer</module>
+  </modules>
 
 
-	<!-- spring-cloud�?��项目依赖�? -->
+	<dependencies>
+		
+
+		<!-- spring boot test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+
+	<!-- spring-cloud项目依赖 -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -38,7 +52,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 
 	<build>
 		<finalName>spring-root</finalName>
